@@ -6,4 +6,4 @@ admin.site.register(Blob)
 # Local Variables:
 # indent-tabs-mode: nil
 # End:
-# exrc: ai et sw=4 ts=4
+# vim: ai et sw=4 ts=4
