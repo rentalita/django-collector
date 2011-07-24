@@ -9,4 +9,4 @@ export PYTHONPATH
 DJANGO_SETTINGS_MODULE=tests.settings
 export DJANGO_SETTINGS_MODULE
 
-nosetests "$@"
+nosetests --with-coverage --cover-html "$@"
