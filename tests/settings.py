@@ -5,6 +5,8 @@ DATABASES = {
     }
 }
 
+INSTALLED_APPS = ('collector',)
+
 # Local Variables:
 # indent-tabs-mode: nil
 # End:

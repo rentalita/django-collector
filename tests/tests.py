@@ -1,4 +1,9 @@
+from collector.models import Blob
 import collector.utils.uid as UID
+
+import django.db
+
+import nose.tools
 
 
 def __uid(length, characters):
@@ -50,6 +55,33 @@ def test_uid():
 
         assert __length == UID.length
         assert __characters == UID.characters
+
+
+@nose.tools.raises(django.db.IntegrityError)
+def __unique():
+        blob1 = Blob()
+        blob2 = Blob()
+
+        blob1.uid = blob2.uid = 'UID'
+
+        blob1.save()
+        blob2.save()
+
+
+def test_models():
+        email = 'example@example.com'
+
+        blob = Blob()
+
+        assert len(blob.uid) == UID.length
+        assert blob.email == ''
+
+        blob.email = email
+        blob.save()
+
+        assert blob.email == email
+
+        __unique()
 
 # Local Variables:
 # indent-tabs-mode: nil
