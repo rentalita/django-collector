@@ -1,5 +1,6 @@
 import collector.utils.uid as UID
 
+
 def __uid(length, characters):
         __length = UID.length
         __characters = UID.characters
@@ -13,6 +14,7 @@ def __uid(length, characters):
         UID.characters = __characters
 
         return uid
+
 
 def test_uid():
         __length = UID.length
