@@ -1,7 +1,9 @@
 from django.contrib import admin
 from collector.models import Blob
 
+
 admin.site.register(Blob)
+
 
 # Local Variables:
 # indent-tabs-mode: nil

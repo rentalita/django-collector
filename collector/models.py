@@ -8,6 +8,7 @@ class Blob(models.Model):
                            default=UID.generate)
     email = models.EmailField(max_length=128, unique=False)
 
+
 # Local Variables:
 # indent-tabs-mode: nil
 # End:

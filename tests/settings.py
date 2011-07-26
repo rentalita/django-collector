@@ -9,6 +9,7 @@ INSTALLED_APPS = ('collector',)
 
 ROOT_URLCONF = 'tests.urls'
 
+
 # Local Variables:
 # indent-tabs-mode: nil
 # End:
