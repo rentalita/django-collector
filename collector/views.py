@@ -1,6 +1,5 @@
 from django.forms import Form, EmailField
 from django.http import HttpResponse
-from django.shortcuts import get_object_or_404
 from django.views.decorators.http import require_http_methods
 
 from collector.models import Blob
@@ -30,7 +29,11 @@ def create(request):
 
 @require_http_methods(['GET'])
 def delete(request, uid):
-    blob = get_object_or_404(Blob, uid=uid)
+    try:
+        blob = Blob.objects.get(uid=uid)
+    except Blob.DoesNotExist:
+        return HttpResponse(status=404)
+
     blob.delete()
 
     return HttpResponse(status=204)
