@@ -86,24 +86,69 @@ def test_blob_model_uid_is_unique():
 def test_create_view():
         client = Client()
 
-        rc = client.post('/collect/', {'email': 'example@example.com'})
-        assert rc.status_code == 201
+        # Moved Permanently
+        rc = client.get('/collect')
+        assert rc.status_code == 301
 
-        rc = client.post('/collect/', {'email': 'example example.com'})
-        assert rc.status_code == 400
+        # Method Not Allowed
+        rc = client.get('/collect/')
+        assert rc.status_code == 405
 
-        rc = client.post('/collect/', {'email': 'example@example com'})
-        assert rc.status_code == 400
+        # Moved Permanently
+        rc = client.post('/collect')
+        assert rc.status_code == 301
 
-        rc = client.post('/collect/', {'email': 'example example com'})
-        assert rc.status_code == 400
-
+        # Bad Request
         rc = client.post('/collect/')
         assert rc.status_code == 400
 
+        # Bad Request
+        rc = client.post('/collect/', {'email': 'example example.com'})
+        assert rc.status_code == 400
+
+        # Bad Request
+        rc = client.post('/collect/', {'email': 'example@example com'})
+        assert rc.status_code == 400
+
+        # Bad Request
+        rc = client.post('/collect/', {'email': 'example example com'})
+        assert rc.status_code == 400
+
+        # Created
+        rc = client.post('/collect/', {'email': 'example@example.com'})
+        assert rc.status_code == 201
+
 
 def test_delete_view():
-        pass
+        client = Client()
+
+        # Moved Permanently
+        rc = client.post('/collect/XXX')
+        assert rc.status_code == 301
+
+        # Method Not Allowed
+        rc = client.post('/collect/XXX/')
+        assert rc.status_code == 405
+
+        # Moved Permanently
+        rc = client.get('/collect/XXX')
+        assert rc.status_code == 301
+
+        # Not Found
+        rc = client.get('/collect/XXX/')
+        assert rc.status_code == 404
+
+        blob = Blob()
+        blob.uid = 'XXX'
+        blob.save()
+
+        # No Content
+        rc = client.get('/collect/XXX/')
+        assert rc.status_code == 204
+
+        # Not Found
+        rc = client.get('/collect/XXX/')
+        assert rc.status_code == 404
 
 
 # Local Variables:
