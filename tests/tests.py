@@ -40,19 +40,19 @@ def test_uid():
         for x in uid:
                 assert x in UID.characters
 
-        uid = __uid(UID.length, 'xX')
+        uid = __uid(UID.length, 'XXX')
 
         assert len(uid) == UID.length
 
         for x in uid:
-                assert x in 'xX'
+                assert x in 'XXX'
 
-        uid = __uid(128, 'xX')
+        uid = __uid(128, 'XXX')
 
         assert len(uid) == 128
 
         for x in uid:
-                assert x in 'xX'
+                assert x in 'XXX'
 
         assert __length == UID.length
         assert __characters == UID.characters
