@@ -2,6 +2,7 @@ from collector.models import Blob
 import collector.utils.uid as UID
 
 import django.db
+from django.test.client import Client
 
 import nose.tools
 
@@ -82,6 +83,24 @@ def test_models():
         assert blob.email == email
 
         __unique()
+
+
+def test_create():
+        client = Client()
+
+        rc = client.post('/collect/', {'email': 'example@example.com'})
+        assert rc.status_code == 201
+
+        rc = client.post('/collect/', {'email': 'example example.com'})
+        assert rc.status_code == 400
+
+        rc = client.post('/collect/')
+        assert rc.status_code == 400
+
+
+def test_delete():
+        pass
+
 
 # Local Variables:
 # indent-tabs-mode: nil
