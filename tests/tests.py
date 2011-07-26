@@ -58,18 +58,7 @@ def test_uid():
         assert __characters == UID.characters
 
 
-@nose.tools.raises(django.db.IntegrityError)
-def __unique():
-        blob1 = Blob()
-        blob2 = Blob()
-
-        blob1.uid = blob2.uid = 'UID'
-
-        blob1.save()
-        blob2.save()
-
-
-def test_models():
+def test_blob_model():
         email = 'example@example.com'
 
         blob = Blob()
@@ -82,10 +71,19 @@ def test_models():
 
         assert blob.email == email
 
-        __unique()
+
+@nose.tools.raises(django.db.IntegrityError)
+def test_blob_model_uid_is_unique():
+        blob1 = Blob()
+        blob2 = Blob()
+
+        blob1.uid = blob2.uid = 'UID'
+
+        blob1.save()
+        blob2.save()
 
 
-def test_create():
+def test_create_view():
         client = Client()
 
         rc = client.post('/collect/', {'email': 'example@example.com'})
@@ -94,11 +92,17 @@ def test_create():
         rc = client.post('/collect/', {'email': 'example example.com'})
         assert rc.status_code == 400
 
+        rc = client.post('/collect/', {'email': 'example@example com'})
+        assert rc.status_code == 400
+
+        rc = client.post('/collect/', {'email': 'example example com'})
+        assert rc.status_code == 400
+
         rc = client.post('/collect/')
         assert rc.status_code == 400
 
 
-def test_delete():
+def test_delete_view():
         pass
 
 
