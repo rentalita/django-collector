@@ -9,6 +9,6 @@ export PYTHONPATH
 DJANGO_SETTINGS_MODULE=tests.settings
 export DJANGO_SETTINGS_MODULE
 
-django-admin.py syncdb -v 0
+django-admin syncdb -v 0
 
 nosetests --with-coverage --cover-html --cover-package=collector "$@"
