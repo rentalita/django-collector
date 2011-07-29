@@ -2,18 +2,15 @@ from django.forms import Form, EmailField
 from django.http import HttpResponse
 from django.views.decorators.http import require_http_methods
 
+from collector.forms import CollectorForm
 from collector.models import Blob
-
-
-class CreateForm(Form):
-    email = EmailField()
 
 
 @require_http_methods(['POST'])
 def create(request):
     data = request.POST
 
-    form = CreateForm(data)
+    form = CollectorForm(data)
     if not form.is_valid():
         return HttpResponse(status=400)
 
