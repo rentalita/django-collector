@@ -40,19 +40,19 @@ def test_uid():
         for x in uid:
                 assert x in UID.characters
 
-        uid = __uid(UID.length, 'XXX')
+        uid = __uid(UID.length, 'XYZ')
 
         assert len(uid) == UID.length
 
         for x in uid:
-                assert x in 'XXX'
+                assert x in 'XYZ'
 
-        uid = __uid(128, 'XXX')
+        uid = __uid(128, 'XYZ')
 
         assert len(uid) == 128
 
         for x in uid:
-                assert x in 'XXX'
+                assert x in 'XYZ'
 
         assert __length == UID.length
         assert __characters == UID.characters
@@ -123,31 +123,31 @@ def test_delete_view():
         client = Client()
 
         # Moved Permanently
-        rc = client.post('/collect/XXX')
+        rc = client.post('/collect/XYZ')
         assert rc.status_code == 301
 
         # Method Not Allowed
-        rc = client.post('/collect/XXX/')
+        rc = client.post('/collect/XYZ/')
         assert rc.status_code == 405
 
         # Moved Permanently
-        rc = client.get('/collect/XXX')
+        rc = client.get('/collect/XYZ')
         assert rc.status_code == 301
 
         # Not Found
-        rc = client.get('/collect/XXX/')
+        rc = client.get('/collect/XYZ/')
         assert rc.status_code == 404
 
         blob = Blob()
-        blob.uid = 'XXX'
+        blob.uid = 'XYZ'
         blob.save()
 
         # No Content
-        rc = client.get('/collect/XXX/')
+        rc = client.get('/collect/XYZ/')
         assert rc.status_code == 204
 
         # Not Found
-        rc = client.get('/collect/XXX/')
+        rc = client.get('/collect/XYZ/')
         assert rc.status_code == 404
 
 
