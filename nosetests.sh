@@ -11,4 +11,4 @@ export DJANGO_SETTINGS_MODULE
 
 django-admin syncdb -v 0
 
-nosetests --with-coverage --cover-html --cover-package=collector "$@"
+nosetests --with-coverage --cover-erase --cover-html --cover-package=collector "$@"
