@@ -69,6 +69,8 @@ def test_blob_model():
         blob.email = email
         blob.save()
 
+        assert blob.email == str(blob)
+
         assert blob.email == email
 
 

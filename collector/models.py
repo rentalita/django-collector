@@ -8,6 +8,8 @@ class Blob(models.Model):
                            default=UID.generate)
     email = models.EmailField(max_length=128, unique=False)
 
+    def __unicode__(self):
+        return self.email
 
 # Local Variables:
 # indent-tabs-mode: nil
