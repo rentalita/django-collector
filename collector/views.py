@@ -8,11 +8,11 @@ from collector.models import Blob
 
 @require_http_methods(['POST'])
 def create(request):
-    data = request.POST
-
-    form = CollectorForm(data)
+    form = CollectorForm(request.POST)
     if not form.is_valid():
         return HttpResponse(status=400)
+
+    data = form.cleaned_data
 
     blob = Blob()
     blob.email = data['email']
