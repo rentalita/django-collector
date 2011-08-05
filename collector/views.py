@@ -15,7 +15,7 @@ def create(request):
         return HttpResponse(status=400)
 
     blob = Blob()
-    blob.emal = data['email']
+    blob.email = data['email']
 
     blob.save()
 
