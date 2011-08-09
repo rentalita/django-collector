@@ -1,12 +1,25 @@
 import random
 import string
 
-length = 40
-characters = string.ascii_letters + string.digits
+__length = 40
+__string = string.ascii_letters + string.digits
 
 
-def generate():
-    return ''.join(random.choice(characters) for x in range(length))
+def get_default_length():
+    return __length
+
+
+def get_default_string():
+    return __string
+
+
+def generate(length=None, string=None):
+    if not length:
+        length = __length
+    if not string:
+        string = __string
+
+    return ''.join(random.choice(string) for x in range(length))
 
 
 # Local Variables:

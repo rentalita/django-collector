@@ -4,7 +4,7 @@ import collector.urls
 
 
 urlpatterns = patterns('',
-    url(r'^collect/', include(collector.urls)),
+    url(r'^collector/', include(collector.urls)),
 )
 
 
