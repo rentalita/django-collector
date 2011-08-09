@@ -15,7 +15,7 @@ def create(request):
     data = form.cleaned_data
 
     blob = Blob()
-    blob.email = data['email']
+    blob.email = data['collectorEmail']
 
     blob.save()
 

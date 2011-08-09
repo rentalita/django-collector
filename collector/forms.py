@@ -2,7 +2,7 @@ from django.forms import Form, EmailField
 
 
 class CollectorForm(Form):
-    email = EmailField()
+    collectorEmail = EmailField()
 
 
 # Local Variables:

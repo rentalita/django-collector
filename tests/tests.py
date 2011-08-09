@@ -105,19 +105,19 @@ def test_create_view():
         assert rc.status_code == 400
 
         # Bad Request
-        rc = client.post('/collect/', {'email': 'example example.com'})
+        rc = client.post('/collect/', {'collectorEmail': 'example example.com'})
         assert rc.status_code == 400
 
         # Bad Request
-        rc = client.post('/collect/', {'email': 'example@example com'})
+        rc = client.post('/collect/', {'collectorEmail': 'example@example com'})
         assert rc.status_code == 400
 
         # Bad Request
-        rc = client.post('/collect/', {'email': 'example example com'})
+        rc = client.post('/collect/', {'collectorEmail': 'example example com'})
         assert rc.status_code == 400
 
         # Created
-        rc = client.post('/collect/', {'email': 'example@example.com'})
+        rc = client.post('/collect/', {'collectorEmail': 'example@example.com'})
         assert rc.status_code == 201
 
 
