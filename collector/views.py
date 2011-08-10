@@ -4,6 +4,7 @@ from django.views.decorators.http import require_http_methods
 
 from collector.forms import CollectorForm
 from collector.models import Blob
+from collector.utils.http import JSONResponse201
 
 
 @require_http_methods(['POST'])
@@ -21,7 +22,7 @@ def create(request):
 
     # TODO: send e-mail
 
-    return HttpResponse(status=201)
+    return JSONResponse201(blob.to_json())
 
 
 @require_http_methods(['GET'])

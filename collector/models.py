@@ -10,8 +10,12 @@ class Blob(models.Model):
                            default=UID.generate)
     email = models.EmailField(max_length=128, unique=False)
 
+    def to_json(self):
+        return {'uid': self.uid, 'email': self.email}
+
     def __unicode__(self):
         return self.email
+
 
 # Local Variables:
 # indent-tabs-mode: nil
