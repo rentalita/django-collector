@@ -135,15 +135,18 @@ def test_create_view_errors():
         assert rc.status_code == 400
 
         # Bad Request
-        rc = client.post('/collector/', {'collectorEmail': 'example example.com'})
+        rc = client.post('/collector/',
+                         {'collectorEmail': 'example example.com'})
         assert rc.status_code == 400
 
         # Bad Request
-        rc = client.post('/collector/', {'collectorEmail': 'example@example com'})
+        rc = client.post('/collector/',
+                         {'collectorEmail': 'example@example com'})
         assert rc.status_code == 400
 
         # Bad Request
-        rc = client.post('/collector/', {'collectorEmail': 'example example com'})
+        rc = client.post('/collector/',
+                         {'collectorEmail': 'example example com'})
         assert rc.status_code == 400
 
 
