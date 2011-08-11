@@ -8,7 +8,7 @@ COLLECTOR_HOME="$(dirname $0)"
 
 cd "${COLLECTOR_HOME}"
 
-django-admin syncdb -v 0
+"${COLLECTOR_BIN}"/django-migrate.sh
 
 "${COLLECTOR_BIN}"/nosetests.sh
 [ $? != 0 ] && echo "ERROR!!!" && exit 1
