@@ -21,8 +21,6 @@ def create(request):
 
     blob.save()
 
-    # TODO: send e-mail
-
     return JSONResponse201(blob.to_json())
 
 
