@@ -1,17 +1,17 @@
 #!/bin/sh
 
-LNDLRD_HOME="$(dirname $0)"
-. "${LNDLRD_HOME}"/etc/common
+COLLECTOR_HOME="$(dirname $0)"
+. "${COLLECTOR_HOME}"/etc/common
 
-cd "${LNDLRD_HOME}"
+cd "${COLLECTOR_HOME}"
 
-"${LNDLRD_BIN}"/python.sh setup.py -q clean
+"${COLLECTOR_BIN}"/python.sh setup.py -q clean
 [ $? != 0 ] && echo "ERROR!!!" && exit 1
 
 find . -name "*~" | xargs rm -f
 find . -name "*.pyc" | xargs rm -f
 rm -f .coverage setup.py
-rm -f "${LNDLRD_LIB}"/python/*
+rm -f "${COLLECTOR_LIB}"/python/*
 
 exit 0
 

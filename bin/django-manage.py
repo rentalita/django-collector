@@ -1,4 +1,4 @@
-from lndlrd.manage import *
+from collector.manage import *
 
 
 execute_manager(settings)

@@ -1,11 +1,11 @@
 #!/bin/sh
 
-LNDLRD_HOME="$(dirname $0)"/..
-export LNDLRD_HOME
+COLLECTOR_HOME="$(dirname $0)"/..
+export COLLECTOR_HOME
 
-. "${LNDLRD_HOME}"/etc/common
+. "${COLLECTOR_HOME}"/etc/common
 
-"${LNDLRD_BIN}"/python.sh "${LNDLRD_BIN}"/django-manage.py "$@" -v 0
+"${COLLECTOR_BIN}"/python.sh "${COLLECTOR_BIN}"/django-manage.py "$@" -v 0
 
 # Local Variables:
 # indent-tabs-mode: nil

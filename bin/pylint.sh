@@ -1,11 +1,11 @@
 #!/bin/sh
 
-LNDLRD_HOME="$(dirname $0)"/..
-export LNDLRD_HOME
+COLLECTOR_HOME="$(dirname $0)"/..
+export COLLECTOR_HOME
 
-. "${LNDLRD_HOME}"/etc/common
+. "${COLLECTOR_HOME}"/etc/common
 
-"${LNDLRD_BIN}"/python.sh "${PYLINT}" ${PYLINTFLAGS} ${LNDLRD_PYLINTFLAGS} "$@"
+"${COLLECTOR_BIN}"/python.sh "${PYLINT}" ${PYLINTFLAGS} ${COLLECTOR_PYLINTFLAGS} "$@"
 
 # Local Variables:
 # indent-tabs-mode: nil

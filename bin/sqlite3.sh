@@ -1,11 +1,11 @@
 #!/bin/sh
 
-LNDLRD_HOME="$(dirname $0)"/..
-export LNDLRD_HOME
+COLLECTOR_HOME="$(dirname $0)"/..
+export COLLECTOR_HOME
 
-. "${LNDLRD_HOME}"/etc/common
+. "${COLLECTOR_HOME}"/etc/common
 
-"${SQLITE3}" ${SQLITE3FLAGS} ${LNDLRD_SQLITE3FLAGS} "$@"
+"${SQLITE3}" ${SQLITE3FLAGS} ${COLLECTOR_SQLITE3FLAGS} "$@"
 
 # Local Variables:
 # indent-tabs-mode: nil
