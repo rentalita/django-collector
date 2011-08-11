@@ -14,7 +14,7 @@ portability at all times!
 
     ./build.sh
 
-## RUN TESTS
+## TEST
 
     ./tests.sh
 
