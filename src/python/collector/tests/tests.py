@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-
 import json
 import string
 
@@ -193,7 +192,6 @@ def test_delete_view_errors():
     # Not Found
     rc = client.get('/collector/xYz/')
     assert rc.status_code == 404
-
 
 # Local Variables:
 # indent-tabs-mode: nil

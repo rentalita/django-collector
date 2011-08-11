@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 
-
 import os
-
 
 DATABASES = {
     'default': {
@@ -14,7 +12,6 @@ DATABASES = {
 INSTALLED_APPS = ('collector',)
 
 ROOT_URLCONF = 'collector.tests.urls'
-
 
 # Local Variables:
 # indent-tabs-mode: nil

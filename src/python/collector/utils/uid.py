@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-
 import random
 import string
 
@@ -23,7 +22,6 @@ def generate(numchars=None, usechars=None):
         usechars = __USECHARS__
 
     return ''.join(random.choice(usechars) for x in range(numchars))
-
 
 # Local Variables:
 # indent-tabs-mode: nil

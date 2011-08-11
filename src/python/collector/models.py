@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-
 from django.db import models
 
 import collector.utils.uid as UID
@@ -18,7 +17,6 @@ class Blob(models.Model):
 
     def __unicode__(self):
         return self.email
-
 
 # Local Variables:
 # indent-tabs-mode: nil
