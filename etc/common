@@ -28,6 +28,11 @@ NOSETESTSFLAGS="--with-coverage --cover-erase --cover-html"
 export NOSETESTSFLAGS
 
 DJANGO_SETTINGS_MODULE="collector.settings"
+
+if [ ! "${COLLECTOR_TESTS}" = "" ]; then
+    DJANGO_SETTINGS_MODULE="collector.tests.settings"
+fi
+
 export DJANGO_SETTINGS_MODULE
 
 COLLECTOR_HOME=$(cd "${COLLECTOR_HOME}"; pwd)

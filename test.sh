@@ -1,12 +1,12 @@
 #!/bin/sh
 
+COLLECTOR_TESTS=1
+export COLLECTOR_TESTS
+
 COLLECTOR_HOME="$(dirname $0)"
 . "${COLLECTOR_HOME}"/etc/common
 
 cd "${COLLECTOR_HOME}"
-
-DJANGO_SETTINGS_MODULE=tests.settings
-export DJANGO_SETTINGS_MODULE
 
 django-admin syncdb -v 0
 

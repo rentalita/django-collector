@@ -1,5 +1,8 @@
 #!/bin/sh
 
+COLLECTOR_TESTS=
+export COLLECTOR_TESTS
+
 COLLECTOR_HOME="$(dirname $0)"
 . "${COLLECTOR_HOME}"/etc/common
 
