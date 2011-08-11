@@ -1,14 +1,8 @@
-# -*- coding: utf-8 -*-
+from setuptools import setup, find_packages
 
 
-from distutils.core import setup
-
-
-setup(name='collector',
-      packages=['collector', 'collector.utils'],
-      version='0.0.1',
-      url='http://software6.net',
-)
+setup(name='collector', version='0.0.1',
+      packages=find_packages('src/python'), package_dir={'': 'src/python'})
 
 
 # Local Variables:

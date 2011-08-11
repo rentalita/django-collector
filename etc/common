@@ -1,0 +1,82 @@
+SQLITE3=$(which sqlite3)
+export SQLITE3
+
+SQLITE3FLAGS=
+export SQLITE3FLAGS
+
+PYTHON="$(which python)"
+export PYTHON
+
+PYTHONFLAGS="-tt"
+
+if [ ! "${DEBUG}" = "" ]; then
+    PYTHONFLAGS="${PYTHONFLAGS} -m pdb"
+fi
+
+export PYTHONFLAGS
+
+PYLINT="$(which pylint)"
+export PYLINT
+
+PYLINTFLAGS=
+export PYLINTFLAGS
+
+NOSETESTS="$(which nosetests)"
+export NOSETESTS
+
+NOSETESTSFLAGS="--with-coverage --cover-erase --cover-html"
+export NOSETESTSFLAGS
+
+DJANGO_SETTINGS_MODULE="lndlrd.settings"
+export DJANGO_SETTINGS_MODULE
+
+LNDLRD_HOME=$(cd "${LNDLRD_HOME}"; pwd)
+export LNDLRD_HOME
+
+LNDLRD_BIN="${LNDLRD_HOME}"/bin
+export LNDLRD_BIN
+
+LNDLRD_ETC="${LNDLRD_HOME}"/etc
+export LNDLRD_ETC
+
+LNDLRD_LIB="${LNDLRD_HOME}"/lib
+export LNDLRD_LIB
+
+LNDLRD_SRC="${LNDLRD_HOME}"/src
+export LNDLRD_SRC
+
+LNDLRD_VAR="${LNDLRD_HOME}"/var
+export LNDLRD_VAR
+
+LNDLRD_DATA="${LNDLRD_VAR}"/data
+export LNDLRD_DATA
+
+LNDLRD_DB="${LNDLRD_VAR}"/db
+export LNDLRD_DB
+
+LNDLRD_LOG="${LNDLRD_VAR}"/log
+export LNDLRD_LOG
+
+LNDLRD_RUN="${LNDLRD_VAR}"/run
+export LNDLRD_RUN
+
+LNDLRD_WWW="${LNDLRD_VAR}"/www
+export LNDLRD_WWW
+
+PYTHONPATH="${LNDLRD_LIB}"/python:"${PYTHONPATH}"
+export PYTHONPATH
+
+LNDLRD_PYTHONFLAGS=
+export LNDLRD_PYTHONFLAGS
+
+LNDLRD_PYLINTFLAGS=--rcfile="${LNDLRD_ETC}"/pylintrc
+export LNDLRD_PYLINTFLAGS
+
+LNDLRD_NOSETESTSFLAGS="--cover-package=lndlrd -w ${LNDLRD_SRC}/python/lndlrd"
+export LNDLRD_NOSETESTSFLAGS
+
+# Local Variables:
+# indent-tabs-mode: nil
+# mode: sh
+# End:
+# vim: ai et sw=4 ts=4
