@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 
-from django.forms import Form, EmailField
 from django.http import HttpResponse
 from django.views.decorators.http import require_http_methods
 

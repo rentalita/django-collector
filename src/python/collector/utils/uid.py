@@ -4,25 +4,25 @@
 import random
 import string
 
-__length = 40
-__string = string.ascii_letters + string.digits
+__NUMCHARS__ = 40
+__USECHARS__ = string.ascii_letters + string.digits
 
 
-def get_default_length():
-    return __length
+def get_default_numchars():
+    return __NUMCHARS__
 
 
-def get_default_string():
-    return __string
+def get_default_usechars():
+    return __USECHARS__
 
 
-def generate(length=None, string=None):
-    if not length:
-        length = __length
-    if not string:
-        string = __string
+def generate(numchars=None, usechars=None):
+    if not numchars:
+        numchars = __NUMCHARS__
+    if not usechars:
+        usechars = __USECHARS__
 
-    return ''.join(random.choice(string) for x in range(length))
+    return ''.join(random.choice(usechars) for x in range(numchars))
 
 
 # Local Variables:

@@ -5,11 +5,11 @@ from django.db import models
 
 import collector.utils.uid as UID
 
-uid_length = UID.get_default_length()
+__UID_NUMCHARS__ = UID.get_default_numchars()
 
 
 class Blob(models.Model):
-    uid = models.CharField(max_length=uid_length, unique=True,
+    uid = models.CharField(max_length=__UID_NUMCHARS__, unique=True,
                            default=UID.generate)
     email = models.EmailField(max_length=128, unique=False)
 

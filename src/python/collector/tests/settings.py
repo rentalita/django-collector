@@ -13,7 +13,7 @@ DATABASES = {
 
 INSTALLED_APPS = ('collector',)
 
-ROOT_URLCONF = 'tests.urls'
+ROOT_URLCONF = 'collector.tests.urls'
 
 
 # Local Variables:

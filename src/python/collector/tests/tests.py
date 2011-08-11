@@ -13,35 +13,35 @@ from collector.models import Blob
 from collector.utils.http import JSONResponse201
 import collector.utils.uid as UID
 
-uid_default_length = 40
-uid_default_string = string.ascii_letters + string.digits
+__UID_DEFAULT_NUMCHARS__ = 40
+__UID_DEFAULT_USECHARS__ = string.ascii_letters + string.digits
 
 
 def test_uid_defaults():
-    assert UID.get_default_length() == \
-        uid_default_length
+    assert UID.get_default_numchars() == \
+        __UID_DEFAULT_NUMCHARS__
 
-    assert UID.get_default_string() == \
-        uid_default_string
+    assert UID.get_default_usechars() == \
+        __UID_DEFAULT_USECHARS__
 
 
 def test_uid_generate():
     uid = UID.generate()
-    assert len(uid) == uid_default_length
+    assert len(uid) == __UID_DEFAULT_NUMCHARS__
     for x in uid:
-        assert x in uid_default_string
+        assert x in __UID_DEFAULT_USECHARS__
 
-    uid = UID.generate(length=128)
+    uid = UID.generate(numchars=128)
     assert len(uid) == 128
     for x in uid:
-        assert x in uid_default_string
+        assert x in __UID_DEFAULT_USECHARS__
 
-    uid = UID.generate(string='xYz')
-    assert len(uid) == uid_default_length
+    uid = UID.generate(usechars='xYz')
+    assert len(uid) == __UID_DEFAULT_NUMCHARS__
     for x in uid:
         assert x in 'xYz'
 
-    uid = UID.generate(length=128, string='xYz')
+    uid = UID.generate(numchars=128, usechars='xYz')
     assert len(uid) == 128
     for x in uid:
         assert x in 'xYz'
