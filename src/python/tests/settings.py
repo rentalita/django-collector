@@ -1,10 +1,13 @@
 # -*- coding: utf-8 -*-
 
 
+import os
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'tests.db',
+        'NAME': os.environ['COLLECTOR_DB'] + os.sep + 'tests.db',
     }
 }
 
