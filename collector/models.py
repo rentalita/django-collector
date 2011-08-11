@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+
+
 from django.db import models
 
 import collector.utils.uid as UID
