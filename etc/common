@@ -9,7 +9,7 @@ export PYTHON
 
 PYTHONFLAGS="-tt"
 
-if [ ! "${DEBUG}" = "" ]; then
+if [ ! "${COLLECTOR_DEBUG}" = "" ]; then
     PYTHONFLAGS="${PYTHONFLAGS} -m pdb"
 fi
 
