@@ -31,7 +31,7 @@ portability at all times!
 
 ## CONTRIBUTE
 
-[](https://github.com/software6/django-collector)
+https://github.com/software6/django-collector
 
 ## LICENSE
 
