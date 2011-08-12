@@ -10,7 +10,7 @@ cd "${COLLECTOR_HOME}"
 
 "${COLLECTOR_BIN}"/django-migrate.sh
 
-"${COLLECTOR_BIN}"/nosetests.sh
+"${COLLECTOR_BIN}"/nosetests.sh "$@"
 [ $? != 0 ] && echo "ERROR!!!" && exit 1
 
 exit 0
