@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 
+from collector.settings import *
+
 import os
+
+DEBUG = True
 
 DATABASES = {
     'default': {
@@ -9,9 +13,14 @@ DATABASES = {
     }
 }
 
+ROOT_URLCONF = 'collector.tests.urls'
+
 INSTALLED_APPS = ('collector',)
 
-ROOT_URLCONF = 'collector.tests.urls'
+COLLECTOR_SEND_EMAIL = True
+
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 8025
 
 # Local Variables:
 # indent-tabs-mode: nil

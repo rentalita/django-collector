@@ -120,17 +120,17 @@ def test_create_view():
 def test_create_view_errors():
     client = Client()
 
-    # Moved Permanently
+    # Not Found
     rc = client.get('/collector')
-    assert rc.status_code == 301
+    assert rc.status_code == 404
 
     # Method Not Allowed
     rc = client.get('/collector/')
     assert rc.status_code == 405
 
-    # Moved Permanently
+    # Not Found
     rc = client.post('/collector')
-    assert rc.status_code == 301
+    assert rc.status_code == 404
 
     # Bad Request
     rc = client.post('/collector/')
@@ -177,17 +177,17 @@ def test_delete_view():
 def test_delete_view_errors():
     client = Client()
 
-    # Moved Permanently
+    # Not Found
     rc = client.post('/collector/xYz')
-    assert rc.status_code == 301
+    assert rc.status_code == 404
 
     # Method Not Allowed
     rc = client.post('/collector/xYz/')
     assert rc.status_code == 405
 
-    # Moved Permanently
+    # Not Found
     rc = client.get('/collector/xYz')
-    assert rc.status_code == 301
+    assert rc.status_code == 404
 
     # Not Found
     rc = client.get('/collector/xYz/')
