@@ -3,6 +3,7 @@
 from django.conf.urls.defaults import patterns, url
 
 urlpatterns = patterns('collector.views',
+    url(r'^deleted/$', 'deleted'),
     url(r'^$', 'create'),
     url(r'^(?P<uid>\w+)/$', 'delete'),
 )

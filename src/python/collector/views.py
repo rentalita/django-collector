@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from django.http import HttpResponse
+from django.shortcuts import redirect, render_to_response
 from django.views.decorators.http import require_http_methods
 
 from collector.forms import CollectorForm
@@ -36,7 +37,17 @@ def delete(request, uid):
 
     blob.delete()
 
-    return HttpResponse(status=204)
+    return redirect(deleted)
+
+
+@require_http_methods(['GET'])
+def deleted(request):
+    try:
+        deleted_tmpl = settings.COLLECTOR_DELETED_TEMPLATE
+    except:
+        deleted_tmpl = 'collector-deleted.tmpl.%s'
+
+    return render_to_response(deleted_tmpl % (request.LANGUAGE_CODE))
 
 # Local Variables:
 # indent-tabs-mode: nil
