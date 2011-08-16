@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from django.conf.urls.defaults import patterns, url
+from django.conf.urls.defaults import handler404, patterns, url
 
 urlpatterns = patterns('collector.views',
     url(r'^deleted/$', 'deleted'),
