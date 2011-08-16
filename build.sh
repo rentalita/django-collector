@@ -12,7 +12,10 @@ if [ ! -f setup.cfg ]; then
         sed -e "s#\@prefix\@#${COLLECTOR_HOME}#g;" setup.cfg.in > setup.cfg
 fi
 
-"${COLLECTOR_BIN}"/python.sh setup.py -q develop
+TARGET="$@"
+TARGET="${TARGET:-develop}"
+
+"${COLLECTOR_BIN}"/python.sh setup.py -q "${TARGET}"
 [ $? != 0 ] && echo "ERROR!!!" && exit 1
 
 exit 0
