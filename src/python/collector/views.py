@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from django.shortcuts import redirect, render_to_response
 from django.views.decorators.http import require_http_methods
 
@@ -33,7 +33,7 @@ def delete(request, uid):
     try:
         blob = Blob.objects.get(uid=uid)
     except Blob.DoesNotExist:
-        return HttpResponse(status=404)
+        raise Http404
 
     blob.delete()
 
