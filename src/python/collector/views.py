@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from django.conf import settings
-from django.http import HttpResponse, Http404
+from django.http import HttpResponse
 from django.shortcuts import redirect, render_to_response
 from django.views.decorators.http import require_http_methods
 
@@ -34,11 +34,21 @@ def delete(request, uid):
     try:
         blob = Blob.objects.get(uid=uid)
     except Blob.DoesNotExist:
-        raise Http404
+        return redirect(blob404)
 
     blob.delete()
 
     return redirect(deleted)
+
+
+@require_http_methods(['GET'])
+def blob404(request):
+    try:
+        blob404_tmpl = settings.COLLECTOR_BLOB404_TEMPLATE
+    except:
+        blob404_tmpl = 'collector-blob404.tmpl.%s'
+
+    return render_to_response(blob404_tmpl % (request.LANGUAGE_CODE))
 
 
 @require_http_methods(['GET'])

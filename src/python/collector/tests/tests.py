@@ -167,9 +167,9 @@ def test_delete_view():
     rc = client.get('/collector/xYz/')
     assert rc.status_code == 302
 
-    # Not Found
+    # Moved Temporarily
     rc = client.get('/collector/xYz/')
-    assert rc.status_code == 404
+    assert rc.status_code == 302
 
     Blob.objects.get(email=email)
 
@@ -187,6 +187,30 @@ def test_delete_view_errors():
 
     # Not Found
     rc = client.get('/collector/xYz')
+    assert rc.status_code == 404
+
+
+def test_blob404_view():
+    client = Client()
+
+    # OK
+    rc = client.get('/collector/blob404/')
+    assert rc.status_code == 200
+
+
+def test_blob404_view_errors():
+    client = Client()
+
+    # Not Found
+    rc = client.post('/collector/blob404')
+    assert rc.status_code == 404
+
+    # Method Not Allowed
+    rc = client.post('/collector/blob404/')
+    assert rc.status_code == 405
+
+    # Not Found
+    rc = client.get('/collector/blob404')
     assert rc.status_code == 404
 
 
@@ -212,7 +236,6 @@ def test_deleted_view_errors():
     # Not Found
     rc = client.get('/collector/deleted')
     assert rc.status_code == 404
-
 
 # Local Variables:
 # indent-tabs-mode: nil

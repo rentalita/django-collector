@@ -3,6 +3,7 @@
 from django.conf.urls.defaults import handler404, patterns, url
 
 urlpatterns = patterns('collector.views',
+    url(r'^blob404/$', 'blob404'),
     url(r'^deleted/$', 'deleted'),
     url(r'^$', 'create'),
     url(r'^(?P<uid>\w+)/$', 'delete'),
