@@ -1,1 +1,1 @@
-Unable to locate blob - ES
+Ya ha sido eliminado?
