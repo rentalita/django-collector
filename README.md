@@ -28,6 +28,41 @@ portability at all times!
 ## OPTIONAL
 
  * [pylint 0.23](http://www.logilab.org/project/pylint)
+ * [python-pip 0.8](http://www.pip-installer.org/)
+
+## SETTINGS
+
+ * `COLLECTOR_SEND_EMAIL`
+
+   True or False. Default is False. Requires a working MTA.
+
+ * `COLLECTOR_FROM_EMAIL`
+
+   Default is the empty string. For example "webmaster@example.com".
+
+ * `COLLECTOR_SUBJECT_TEMPLATE`
+
+   Default is 'collector-subject.tmpl.%s'.
+
+ * `COLLECTOR_MESSAGE_TEMPLATE`
+
+   Default is 'collector-message.tmpl.%s'.
+
+ * `COLLECTOR_DELETED_TEMPLATE`
+
+   Default is 'collector-deleted.tmpl.%s'.
+
+ * `COLLECTOR_BLOB404_TEMPLATE`
+
+   Default is 'collector-blob404.tmpl.%s'.
+
+## TEMPLATE VARIABLES
+
+ * `COLLECTOR_URL`
+
+   This is a fully-qualified, hard-to-guess, and unique URL that will
+   delete the associated email address when clicked. This is expected
+   to appear in the `COLLECTOR_MESSAGE_TEMPLATE`.
 
 ## CONTRIBUTE
 
