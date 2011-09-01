@@ -2,7 +2,7 @@
 
 from setuptools import setup, find_packages
 
-setup(name='collector', version='1.1.0',
+setup(name='collector', version='2.0.0',
       packages=find_packages('src/python'), package_dir={'': 'src/python'})
 
 # Local Variables:
