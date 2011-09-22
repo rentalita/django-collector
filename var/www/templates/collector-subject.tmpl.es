@@ -1,1 +1,1 @@
-Hola
+Un correo electrónico importante
