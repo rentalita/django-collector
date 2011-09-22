@@ -1,14 +1,15 @@
-Django Collector -- collects emails
+Django Collector -- collects email addresses
 ===
 
-Django Collector is a django application that is used to collect
-emails. The typical use case is a start-up that is in the pre-launch
-phase and wants to know whom they should send an email to when the
-site launches.
+Django Collector is a django application that is used to collect email
+addresses. The typical use case is a start-up that is in the
+pre-launch phase and wants to collect email addresses so that a launch
+notice may be sent out.
 
 Django Collector is unique in that is provides a mechanism for people
-to delete their emails from the list of collected e-mails. Full data
-portability at all times!
+to delete their email addresses before the launch notice is sent out.
+
+Full data portability at all times!
 
 ## BUILD
 
@@ -17,6 +18,30 @@ portability at all times!
 ## TEST
 
     ./tests.sh
+
+    ..............
+    Name                    Stmts   Exec  Cover   Missing
+    -----------------------------------------------------
+    collector                   1      1   100%
+    collector.forms             3      3   100%
+    collector.models           10     10   100%
+    collector.settings          9      9   100%
+    collector.urls              2      2   100%
+    collector.utils             1      1   100%
+    collector.utils.email      25     22    88%   11-13
+    collector.utils.http       11     11   100%
+    collector.utils.uid        14     14   100%
+    collector.views            37     37   100%
+    -----------------------------------------------------
+    TOTAL                     113    110    97%
+    ----------------------------------------------------------------------
+    Ran 14 tests in 1.427s
+
+    OK
+
+## INSTALL (suggested)
+
+    pip install --user -e .
 
 ## REQUIREMENTS
 
@@ -34,27 +59,54 @@ portability at all times!
 
  * `COLLECTOR_SEND_EMAIL`
 
-   True or False. Default is False. Requires a working MTA.
+   True or False. Default is False. Requires a working MTA. When True,
+   Django Collector will send an email with instructions on how to
+   delete the email address. This is as simple as clicking on a link
+   in the email.
 
  * `COLLECTOR_FROM_EMAIL`
 
-   Default is the empty string. For example "webmaster@example.com".
+   Default is the empty string. This email address will be used in the
+   From: field. For example `webmaster@example.com`.
+
+#### TEMPLATE SETTINGS
+
+ Each template may be localized. `%s` will be replaced by the user's
+ preferred language, e.g. `es`.
+
+ For example, in settings.py:
+
+    LANGUAGE_CODE = 'en'
+
+    _ = lambda x: x
+
+    LANGUAGES = (
+        ('en', _(u'English')),
+        ('es', _(u'Español')),
+    )
+
+ means that English and Español are supported. English is the
+ default. Users that request other languages will get English.
 
  * `COLLECTOR_SUBJECT_TEMPLATE`
 
-   Default is 'collector-subject.tmpl.%s'.
+   Default is `collector-subject.tmpl.%s`.
 
  * `COLLECTOR_MESSAGE_TEMPLATE`
 
-   Default is 'collector-message.tmpl.%s'.
+   Default is `collector-message.tmpl.%s`.
 
  * `COLLECTOR_DELETED_TEMPLATE`
 
-   Default is 'collector-deleted.tmpl.%s'.
+   Default is `collector-deleted.tmpl.%s`. This template will be
+   displayed when the user deletes her email address by clicking the
+   link in the email sent to her.
 
  * `COLLECTOR_BLOB404_TEMPLATE`
 
-   Default is 'collector-blob404.tmpl.%s'.
+   Default is `collector-blob404.tmpl.%s`. This template will be
+   displayed when the user attempts to delete an email address that
+   has already been deleted.
 
 ## TEMPLATE VARIABLES
 
