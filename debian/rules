@@ -1,4 +1,4 @@
-#!./bin/make.sh -f
+#!/usr/bin/make -f
 # -*- makefile -*-
 
 %:
