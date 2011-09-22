@@ -1,0 +1,5 @@
+#!./bin/make.sh -f
+# -*- makefile -*-
+
+%:
+	dh $@

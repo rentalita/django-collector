@@ -1,0 +1,23 @@
+Source: python-django-collector
+Section: python
+Priority: optional
+Maintainer: Software 6 <hello@software6.net>
+Build-Depends: debhelper, python, python-setuptools
+XS-Python-Version: >= 2.4
+Standards-Version: 3.9.2
+
+Package: python-django-collector
+Homepage: https://github.com/software6/django-collector
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, python-django
+XB-Python-Version: ${python:Versions}
+Description: Collect email addresses to tell people when a start-up has launched.
+ Django Collector is a django application that is used to collect
+ email addresses. The typical use case is a start-up that is in the
+ pre-launch phase and wants to collect email addresses so that a
+ launch notice may be sent out.
+ .
+ Django Collector is unique in that is provides a mechanism for people
+ to delete their email addresses before the launch notice is sent out.
+ .
+ Full data portability at all times!
