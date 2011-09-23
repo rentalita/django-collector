@@ -1,8 +1,13 @@
 # -*- coding: utf-8 -*-
 
+import os
+
 from setuptools import setup, find_packages
 
-setup(name='django-collector', version='2.0.0',
+PACKAGE = os.environ['PACKAGE']
+VERSION = os.environ['VERSION']
+
+setup(name=PACKAGE, version=VERSION,
       packages=find_packages('src/python'), package_dir={'': 'src/python'},
       author='Software 6',
       author_email='hello@software6.net',
