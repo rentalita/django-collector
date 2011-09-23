@@ -13,8 +13,6 @@ cd "${COLLECTOR_HOME}"
 
 find . -name "*~" | xargs rm -f
 find . -name "*.pyc" | xargs rm -f
-rm -f .coverage setup.cfg
-rm -f "${COLLECTOR_LIB}"/python/*
 
 exit 0
 
