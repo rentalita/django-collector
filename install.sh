@@ -8,13 +8,8 @@ COLLECTOR_HOME="$(dirname $0)"
 
 cd "${COLLECTOR_HOME}"
 
-"${COLLECTOR_BIN}"/python.sh setup.py -q clean "$@"
+"${COLLECTOR_BIN}"/python.sh setup.py -q install "$@"
 [ $? != 0 ] && echo "ERROR!!!" && exit 1
-
-find . -name "*~" | xargs rm -f
-find . -name "*.pyc" | xargs rm -f
-rm -f .coverage setup.cfg
-rm -f "${COLLECTOR_LIB}"/python/*
 
 exit 0
 
