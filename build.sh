@@ -15,7 +15,7 @@ fi
 TARGET="$@"
 TARGET="${TARGET:-develop}"
 
-"${COLLECTOR_BIN}"/python.sh setup.py -q "${TARGET}"
+"${COLLECTOR_BIN}"/python.sh setup.py -q ${TARGET}
 [ $? != 0 ] && echo "ERROR!!!" && exit 1
 
 exit 0
