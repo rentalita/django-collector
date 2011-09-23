@@ -8,9 +8,13 @@ override_dh_auto_clean:
 	./clean.sh --all
 
 override_dh_auto_build:
-	rm -f setup.cfg
 	./build.sh build --force
 
 override_dh_auto_install:
-	rm -f setup.cfg
-	./install.sh
+	mv -f setup.cfg setup.cfg.orig
+	mv -f setup.cfg.in setup.cfg.in.orig
+	echo '[install]' >> setup.cfg.in
+	echo 'root=debian/@PACKAGE@' >> setup.cfg.in
+	./install.sh --force --no-compile -O0 --install-layout=deb
+	mv -f setup.cfg.orig setup.cfg
+	mv -f setup.cfg.in.orig setup.cfg.in

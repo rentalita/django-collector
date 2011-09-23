@@ -1,2 +1,2 @@
 [install]
-home=@prefix@
+home=@PREFIX@

@@ -87,7 +87,8 @@ COLLECTOR_NOSETESTSFLAGS="--cover-package=collector -w ${COLLECTOR_SRC}/python/c
 export COLLECTOR_NOSETESTSFLAGS
 
 if [ ! -f "${COLLECTOR_HOME}"/setup.cfg ]; then
-    sed -e "s#\@prefix\@#${COLLECTOR_HOME}#g;" \
+    sed -e "s#\@PREFIX\@#${COLLECTOR_HOME}#g;" \
+        -e "s#\@PACKAGE\@#${PACKAGE}#g;" \
         "${COLLECTOR_HOME}"/setup.cfg.in > "${COLLECTOR_HOME}"/setup.cfg
 fi
 
