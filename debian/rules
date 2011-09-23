@@ -3,3 +3,14 @@
 
 %:
 	dh $@
+
+override_dh_auto_clean:
+	./clean.sh --all
+
+override_dh_auto_build:
+	rm -f setup.cfg
+	./build.sh build --force
+
+override_dh_auto_install:
+	rm -f setup.cfg
+	./install.sh

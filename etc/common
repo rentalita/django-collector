@@ -86,6 +86,11 @@ export COLLECTOR_PYLINTFLAGS
 COLLECTOR_NOSETESTSFLAGS="--cover-package=collector -w ${COLLECTOR_SRC}/python/collector"
 export COLLECTOR_NOSETESTSFLAGS
 
+if [ ! -f "${COLLECTOR_HOME}"/setup.cfg ]; then
+    sed -e "s#\@prefix\@#${COLLECTOR_HOME}#g;" \
+        "${COLLECTOR_HOME}"/setup.cfg.in > "${COLLECTOR_HOME}"/setup.cfg
+fi
+
 # Local Variables:
 # indent-tabs-mode: nil
 # mode: sh

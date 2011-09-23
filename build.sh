@@ -8,10 +8,6 @@ COLLECTOR_HOME="$(dirname $0)"
 
 cd "${COLLECTOR_HOME}"
 
-if [ ! -f setup.cfg ]; then
-        sed -e "s#\@prefix\@#${COLLECTOR_HOME}#g;" setup.cfg.in > setup.cfg
-fi
-
 TARGET="$@"
 TARGET="${TARGET:-develop}"
 
