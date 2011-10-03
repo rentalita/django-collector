@@ -13,11 +13,19 @@ Full data portability at all times!
 
 ## BUILD
 
+This runs `python setup.py develop` (more or less).
+
     ./build.sh
 
 ## TEST
 
+This uses `nosetests` to run the unit tests, and enables the built-in
+coverage report.
+
     ./tests.sh
+    sensible-browser ./src/python/collector/cover/index.html
+
+The unit test results should look like:
 
     ..............
     Name                    Stmts   Exec  Cover   Missing
