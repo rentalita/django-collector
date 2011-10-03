@@ -1,4 +1,4 @@
-Django Collector -- collects email addresses
+Django Collector -- Collects email addresses.
 ===
 
 Django Collector is a django application that is used to collect email
@@ -53,9 +53,13 @@ The unit test results should look like:
 
 ## REQUIREMENTS
 
+As tested on [Ubuntu 11.04](http://ubuntu.com/). See also [Ubuntu
+Setup](https://github.com/software6/ubuntu-setup)
+
  * [python 2.7](http://www.python.org/)
  * [python-setuptools 0.6](http://packages.python.org/distribute/)
  * [python-nose 1.0](http://code.google.com/p/python-nose/)
+ * [python-coverage 3.4](http://nedbatchelder.com/code/coverage/)
  * [python-django 1.3](http://www.djangoproject.com/)
 
 ## OPTIONAL
@@ -90,7 +94,7 @@ The unit test results should look like:
 
     LANGUAGES = (
         ('en', _(u'English')),
-        ('es', _(u'Español')),
+        ('es', _(u'Espanol')),
     )
 
  means that English and Español are supported. English is the
@@ -132,3 +136,7 @@ https://github.com/software6/django-collector
 
 Django Collector is brought to you by [Software
 6](http://software6.net/) under the MIT License.
+
+## CREATED BY
+
+https://github.com/software6/django-layout
