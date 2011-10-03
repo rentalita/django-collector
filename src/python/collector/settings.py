@@ -29,7 +29,7 @@ _ = lambda x: x
 
 LANGUAGES = (
     ('en', _(u'English')),
-    ('es', _(u'Español')),
+    ('es', _(u'Espanol')),
 )
 
 APPEND_SLASH = False
