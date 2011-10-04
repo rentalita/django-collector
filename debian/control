@@ -2,7 +2,7 @@ Source: python-django-collector
 Section: python
 Priority: optional
 Maintainer: Software 6 <hello@software6.net>
-Build-Depends: debhelper, python, python-setuptools
+Build-Depends: debhelper (>= 8.0), python-setuptools
 Standards-Version: 3.9.2
 
 Package: python-django-collector
