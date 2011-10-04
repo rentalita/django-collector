@@ -29,21 +29,21 @@ coverage report.
 
  * Use the [Software 6 PPA](https://launchpad.net/~software6/+archive/ppa):
 
-    sudo add-apt-repository ppa:software6/ppa
-    sudo apt-get update && sudo apt-get install python-django-collector
+        sudo add-apt-repository ppa:software6/ppa
+        sudo apt-get update && sudo apt-get install python-django-collector
 
  * Create a .deb:
 
-    debuild -uc -us -i -I
-    sudo dpkg -i ../python-django-collector*.deb
+        debuild -uc -us -i -I
+        sudo dpkg -i ../python-django-collector*.deb
 
  * Use the [Cheese Shop](http://pypi.python.org/pypi):
 
-    pip install --user djang-collector
+        pip install --user djang-collector
 
  * Link the source code under `${HOME}/.local`:
 
-    pip install --user -e .
+        pip install --user -e .
 
 Please note that using `pip install --user` also requires something
 like:
