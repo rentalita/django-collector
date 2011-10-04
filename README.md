@@ -25,7 +25,17 @@ coverage report.
     ./tests.sh
     sensible-browser ./src/python/collector/cover/index.html
 
-## INSTALL (suggested)
+## INSTALL
+
+ * Use the Software 6 PPA:
+
+    https://launchpad.net/~software6/+archive/ppa
+
+ * Create a .deb:
+
+    debuild -uc -us -i -I
+
+ * Link source code to ${HOME}/.local using pip:
 
     pip install --user -e .
 
