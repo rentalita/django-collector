@@ -27,7 +27,7 @@ coverage report.
 
 ## INSTALL
 
- * Use the (Software 6 PPA)[https://launchpad.net/~software6/+archive/ppa]:
+ * Use the [Software 6 PPA](https://launchpad.net/~software6/+archive/ppa):
 
     sudo add-apt-repository ppa:software6/ppa
     sudo apt-get update && sudo apt-get install python-django-collector
