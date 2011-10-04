@@ -25,47 +25,9 @@ coverage report.
     ./tests.sh
     sensible-browser ./src/python/collector/cover/index.html
 
-The unit test results should look like:
-
-    ..............
-    Name                    Stmts   Exec  Cover   Missing
-    -----------------------------------------------------
-    collector                   1      1   100%
-    collector.forms             3      3   100%
-    collector.models           10     10   100%
-    collector.settings          9      9   100%
-    collector.urls              2      2   100%
-    collector.utils             1      1   100%
-    collector.utils.email      25     22    88%   11-13
-    collector.utils.http       11     11   100%
-    collector.utils.uid        14     14   100%
-    collector.views            37     37   100%
-    -----------------------------------------------------
-    TOTAL                     113    110    97%
-    ----------------------------------------------------------------------
-    Ran 14 tests in 1.427s
-
-    OK
-
 ## INSTALL (suggested)
 
     pip install --user -e .
-
-## REQUIREMENTS
-
-As tested on [Ubuntu 11.04](http://ubuntu.com/). See also [Ubuntu
-Setup](https://github.com/software6/ubuntu-setup)
-
- * [python 2.7](http://www.python.org/)
- * [python-setuptools 0.6](http://packages.python.org/distribute/)
- * [python-nose 1.0](http://code.google.com/p/python-nose/)
- * [python-coverage 3.4](http://nedbatchelder.com/code/coverage/)
- * [python-django 1.3](http://www.djangoproject.com/)
-
-## OPTIONAL
-
- * [pylint 0.23](http://www.logilab.org/project/pylint)
- * [python-pip 0.8](http://www.pip-installer.org/)
 
 ## SETTINGS
 
@@ -80,8 +42,6 @@ Setup](https://github.com/software6/ubuntu-setup)
 
    Default is the empty string. This email address will be used in the
    From: field. For example `webmaster@example.com`.
-
-#### TEMPLATE SETTINGS
 
  Each template may be localized. `%s` will be replaced by the user's
  preferred language, e.g. `es`.
@@ -127,6 +87,22 @@ Setup](https://github.com/software6/ubuntu-setup)
    This is a fully-qualified, hard-to-guess, and unique URL that will
    delete the associated email address when clicked. This is expected
    to appear in the `COLLECTOR_MESSAGE_TEMPLATE`.
+
+## REQUIREMENTS
+
+As tested on [Ubuntu 11.04](http://ubuntu.com/). See also [Ubuntu
+Setup](https://github.com/software6/ubuntu-setup)
+
+ * [python 2.7](http://www.python.org/)
+ * [python-setuptools 0.6](http://packages.python.org/distribute/)
+ * [python-nose 1.0](http://code.google.com/p/python-nose/)
+ * [python-coverage 3.4](http://nedbatchelder.com/code/coverage/)
+ * [python-django 1.3](http://www.djangoproject.com/)
+
+## OPTIONAL
+
+ * [pylint 0.23](http://www.logilab.org/project/pylint)
+ * [python-pip 0.8](http://www.pip-installer.org/)
 
 ## CONTRIBUTE
 
