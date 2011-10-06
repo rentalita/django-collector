@@ -59,6 +59,7 @@ Setup](https://github.com/software6/ubuntu-setup).
 ## OPTIONAL
 
  * [pylint 0.23](http://www.logilab.org/project/pylint)
+ * [python-sphinx 1.0](http://sphinx.pocoo.org/)
  * [python-pip 0.8](http://www.pip-installer.org/)
 
 ## CONTRIBUTE
