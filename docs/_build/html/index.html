@@ -48,6 +48,86 @@
 </ul>
 </div>
 </div>
+<div class="section" id="installation">
+<h1>INSTALLATION<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<ul>
+<li><p class="first">Use the Software 6 PPA:</p>
+<div class="highlight-python"><pre>sudo add-apt-repository ppa:software6/ppa
+sudo apt-get update
+sudo apt-get install python-django-collector</pre>
+</div>
+</li>
+</ul>
+<p>See also: <a class="reference external" href="https://launchpad.net/~software6/+archive/ppa">https://launchpad.net/~software6/+archive/ppa</a></p>
+<ul>
+<li><p class="first">Use the Cheese Shop:</p>
+<div class="highlight-python"><pre>sudo pip install djang-collector</pre>
+</div>
+</li>
+</ul>
+<p>See also: <a class="reference external" href="http://pypi.python.org/pypi">http://pypi.python.org/pypi</a></p>
+</div>
+<div class="section" id="settings">
+<h1>SETTINGS<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h1>
+<p>These settings are expected to appear in <tt class="docutils literal"><span class="pre">settings.py</span></tt>.</p>
+<ul class="simple">
+<li>COLLECTOR_SEND_EMAIL</li>
+</ul>
+<p>True or False. Default is False. Requires a working MTA. When True,
+Django Collector will send an email with instructions on how to delete
+the email address. This is as simple as clicking on a link in the
+email.</p>
+<ul class="simple">
+<li>COLLECTOR_FROM_EMAIL</li>
+</ul>
+<p>Default is the empty string. This email address will be used in the
+<tt class="docutils literal"><span class="pre">From:</span></tt> field. For example: <tt class="docutils literal"><span class="pre">webmaster&#64;example.com</span></tt>.</p>
+<p>Each template may be localized. <tt class="docutils literal"><span class="pre">%s</span></tt> will be replaced by the user&#8217;s
+preferred language, e.g. <tt class="docutils literal"><span class="pre">es</span></tt>.</p>
+<p>For example, in settings.py:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">LANGUAGE_CODE</span> <span class="o">=</span> <span class="s">&#39;en&#39;</span>
+
+<span class="n">_</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span>
+
+<span class="n">LANGUAGES</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="s">&#39;en&#39;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s">u&#39;English&#39;</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s">&#39;es&#39;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s">u&#39;Espanol&#39;</span><span class="p">)),</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>means that English and Espanol are supported. English is the
+default. Users that request other languages will get English.</p>
+<ul class="simple">
+<li>COLLECTOR_SUBJECT_TEMPLATE</li>
+</ul>
+<p>Default is <tt class="docutils literal"><span class="pre">collector-subject.tmpl.%s</span></tt>.</p>
+<ul class="simple">
+<li>COLLECTOR_MESSAGE_TEMPLATE</li>
+</ul>
+<p>Default is <tt class="docutils literal"><span class="pre">collector-message.tmpl.%s</span></tt>.</p>
+<ul class="simple">
+<li>COLLECTOR_DELETED_TEMPLATE</li>
+</ul>
+<p>Default is <tt class="docutils literal"><span class="pre">collector-deleted.tmpl.%s</span></tt>. This template will be
+displayed when the user deletes her email address by clicking the link
+in the email sent to her.</p>
+<ul class="simple">
+<li>COLLECTOR_BLOB404_TEMPLATE</li>
+</ul>
+<p>Default is <tt class="docutils literal"><span class="pre">collector-blob404.tmpl.%s</span></tt>. This template will be
+displayed when the user attempts to delete an email address that has
+already been deleted.</p>
+</div>
+<div class="section" id="template-variables">
+<h1>TEMPLATE VARIABLES<a class="headerlink" href="#template-variables" title="Permalink to this headline">¶</a></h1>
+<p>These variables are made available to every template.</p>
+<ul class="simple">
+<li>COLLECTOR_URL</li>
+</ul>
+<p>This is a fully-qualified, hard-to-guess, and unique URL that will
+delete the associated email address when clicked. This is expected to
+appear in the <tt class="docutils literal"><span class="pre">COLLECTOR_MESSAGE_TEMPLATE</span></tt>.</p>
+</div>
 <div class="section" id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
@@ -68,6 +148,9 @@
 <li><a class="reference internal" href="#">Welcome to Django Collector&#8217;s documentation!</a><ul>
 </ul>
 </li>
+<li><a class="reference internal" href="#installation">INSTALLATION</a></li>
+<li><a class="reference internal" href="#settings">SETTINGS</a></li>
+<li><a class="reference internal" href="#template-variables">TEMPLATE VARIABLES</a></li>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
 </ul>
 
