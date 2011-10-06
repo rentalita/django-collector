@@ -35,6 +35,17 @@ coverage report.
 
         pip install --user -e .
 
+## DEBUG
+
+The layout used by Django Collector depends upon a particular
+environment being setup (see `etc/common`). For this reason several
+wrapper scripts have been provided to help when working on the
+command-line. For example:
+
+    $ ./bin/python.sh 
+    >>> from collector.models import Blob
+    >>> Blob.objects.all()
+
 ## REQUIREMENTS
 
 As tested on [Ubuntu 11.04](http://ubuntu.com/). See also [Ubuntu
