@@ -42,7 +42,6 @@ environment has been setup (see `etc/common`). For this reason several
 wrapper scripts have been provided to help when working on the
 command-line. For example:
 
-    $ ./bin/django-migrate.sh
     $ ./bin/python.sh 
     >>> from collector.models import Blob
     >>> Blob.objects.all()
