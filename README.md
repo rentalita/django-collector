@@ -1,16 +1,6 @@
 Django Collector -- Collects email addresses.
 ===
 
-Django Collector is a django application that is used to collect email
-addresses. The typical use case is a start-up that is in the
-pre-launch phase and wants to collect email addresses so that a launch
-notice may be sent out.
-
-Django Collector is unique in that is provides a mechanism for people
-to delete their email addresses before the launch notice is sent out.
-
-Full data portability at all times!
-
 ## QUICK START
 
 Please consult [The Django Collector
