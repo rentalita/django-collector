@@ -80,10 +80,16 @@ export PYTHONPATH
 COLLECTOR_PYTHONFLAGS=
 export COLLECTOR_PYTHONFLAGS
 
-COLLECTOR_PYLINTFLAGS=--rcfile="${COLLECTOR_ETC}"/pylintrc
+COLLECTOR_PYLINTFLAGS="
+    --rcfile=${COLLECTOR_ETC}/pylintrc
+"
 export COLLECTOR_PYLINTFLAGS
 
-COLLECTOR_NOSETESTSFLAGS="--cover-package=collector -w ${COLLECTOR_SRC}/python/collector"
+COLLECTOR_NOSETESTSFLAGS="
+    --cover-html-dir=${COLLECTOR_HOME}/coverage
+    --cover-package=collector
+    -w ${COLLECTOR_SRC}/python/collector
+"
 export COLLECTOR_NOSETESTSFLAGS
 
 if [ ! -f "${COLLECTOR_HOME}"/setup.cfg ]; then

@@ -29,7 +29,7 @@ This uses `nosetests` to run the unit tests, and enables the built-in
 coverage report.
 
     ./tests.sh
-    sensible-browser ./src/python/collector/cover/index.html
+    sensible-browser ./coverage/index.html
 
 ## INSTALL
 
