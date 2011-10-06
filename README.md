@@ -37,8 +37,8 @@ coverage report.
 
 ## DEBUG
 
-The layout used by Django Collector depends upon a particular
-environment being setup (see `etc/common`). For this reason several
+The layout used by Django Collector depends on that a particular
+environment has been setup (see `etc/common`). For this reason several
 wrapper scripts have been provided to help when working on the
 command-line. For example:
 
