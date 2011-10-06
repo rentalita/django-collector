@@ -16,6 +16,14 @@ to delete their email addresses before the launch notice is sent out.
 
 Full data portability at all times!
 
+Django Collector is all over the series of tubes...
+
+* https://github.com/software6/django-collector
+* https://launchpad.net/django-collector
+* http://django-collector.rtfd.org
+* http://pypi.python.org/pypi/django-collector
+* http://djangopackages.com/packages/p/django-collector
+
 INSTALLATION
 ============
 
@@ -30,8 +38,6 @@ See also: https://launchpad.net/~software6/+archive/ppa
 * Use the Cheese Shop::
 
     sudo pip install djang-collector
-
-See also: http://pypi.python.org/pypi
 
 SETTINGS
 ========
@@ -98,17 +104,12 @@ This is a fully-qualified, hard-to-guess, and unique URL that will
 delete the associated email address when clicked. This is expected to
 appear in the ``COLLECTOR_MESSAGE_TEMPLATE``.
 
-Examples
+EXAMPLES
 ========
 
 Sites using Django Collector:
 
 * http://lndlrd.com
-
-Contents:
-
-.. toctree::
-   :maxdepth: 2
 
 Indices and tables
 ==================
