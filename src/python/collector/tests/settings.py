@@ -16,8 +16,6 @@ DATABASES = {
 
 ROOT_URLCONF = 'collector.tests.urls'
 
-INSTALLED_APPS = ('collector',)
-
 COLLECTOR_SEND_EMAIL = True
 
 EMAIL_HOST = 'localhost'
