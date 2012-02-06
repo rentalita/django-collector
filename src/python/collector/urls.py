@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from django.conf.urls.defaults import handler404, patterns, url
+from django.conf.urls.defaults import patterns, url
 
 urlpatterns = patterns('collector.views',
     url(r'^blob404/$', 'blob404'),
