@@ -18,7 +18,7 @@ Full data portability at all times!
 
 Django Collector is all over the series of tubes...
 
-* https://github.com/software6/django-collector
+* https://github.com/rentalita/django-collector
 * https://launchpad.net/django-collector
 * http://django-collector.rtfd.org
 * http://pypi.python.org/pypi/django-collector
@@ -27,13 +27,13 @@ Django Collector is all over the series of tubes...
 INSTALLATION
 ============
 
-* Use the Software 6 PPA::
+* Use the Rentalita PPA::
 
-    sudo add-apt-repository ppa:software6/ppa
+    sudo add-apt-repository ppa:rentalita/ppa
     sudo apt-get update
     sudo apt-get install python-django-collector
 
-See also: https://launchpad.net/~software6/+archive/ppa
+See also: https://launchpad.net/~rentalita/+archive/ppa
 
 * Use the Cheese Shop::
 

@@ -49,7 +49,7 @@ command-line. For example:
 ## REQUIREMENTS
 
 As tested on [Ubuntu 11.04](http://ubuntu.com/). See also [Ubuntu
-Setup](https://github.com/software6/ubuntu-setup).
+Setup](https://github.com/rentalita/ubuntu-setup).
 
  * [python 2.7](http://www.python.org/)
  * [python-setuptools 0.6](http://packages.python.org/distribute/)
@@ -65,13 +65,13 @@ Setup](https://github.com/software6/ubuntu-setup).
 
 ## CONTRIBUTE
 
-https://github.com/software6/django-collector
+https://github.com/rentalita/django-collector
 
 ## LICENSE
 
 Django Collector is brought to you by [Software
-6](http://software6.net/) under the MIT License.
+6](http://rentalita.net/) under the MIT License.
 
 ## CREATED BY
 
-https://github.com/software6/django-layout
+https://github.com/rentalita/django-layout

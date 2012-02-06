@@ -9,10 +9,10 @@ VERSION = os.environ['VERSION']
 
 setup(name=PACKAGE, version=VERSION,
       packages=find_packages('src/python'), package_dir={'': 'src/python'},
-      author='Software 6',
-      author_email='hello@software6.net',
+      author='Rentalita',
+      author_email='hello@rentalita.net',
       description='Collect email addresses to tell people when a start-up has launched.',
-      url='https://github.com/software6/django-collector',
+      url='https://github.com/rentalita/django-collector',
 )
 
 # Local Variables:
