@@ -1,8 +1,3 @@
-.. Django Collector documentation master file, created by
-   sphinx-quickstart on Thu Oct  6 12:00:52 2011.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Welcome to Django Collector's documentation!
 ============================================
 
@@ -16,7 +11,7 @@ to delete their email addresses before the launch notice is sent out.
 
 Full data portability at all times!
 
-Django Collector is all over the series of tubes...
+Django Collector is all over teh internets...
 
 * https://github.com/rentalita/django-collector
 * https://launchpad.net/django-collector
@@ -56,8 +51,7 @@ email.
 Default is the empty string. This email address will be used in the
 ``From:`` field. For example: ``webmaster@example.com``.
 
-Each template may be localized. ``%s`` will be replaced by the user's
-preferred language, e.g. ``es``.
+Each template has been localized.
 
 For example, in settings.py::
 
@@ -75,21 +69,21 @@ default. Users that request other languages will get English.
 
 * COLLECTOR_SUBJECT_TEMPLATE
 
-Default is ``collector-subject.tmpl.%s``.
+Default is ``collector/subject.txt``.
 
 * COLLECTOR_MESSAGE_TEMPLATE
 
-Default is ``collector-message.tmpl.%s``.
+Default is ``collector/message.txt``.
 
 * COLLECTOR_DELETED_TEMPLATE
 
-Default is ``collector-deleted.tmpl.%s``. This template will be
+Default is ``collector/deleted.html``. This template will be
 displayed when the user deletes her email address by clicking the link
 in the email sent to her.
 
 * COLLECTOR_BLOB404_TEMPLATE
 
-Default is ``collector-blob404.tmpl.%s``. This template will be
+Default is ``collector/blob404.html``. This template will be
 displayed when the user attempts to delete an email address that has
 already been deleted.
 
@@ -109,7 +103,7 @@ EXAMPLES
 
 Sites using Django Collector:
 
-* http://lndlrd.com
+* https://www.rentalita.com
 
 Indices and tables
 ==================
