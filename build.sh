@@ -11,10 +11,10 @@ cd "${COLLECTOR_HOME}"
 TARGET="$@"
 TARGET="${TARGET:-develop}"
 
-"${COLLECTOR_BIN}"/django-migrate.sh
-
 "${COLLECTOR_BIN}"/python.sh setup.py -q ${TARGET}
 [ $? != 0 ] && echo "ERROR!!!" && exit 1
+
+"${COLLECTOR_BIN}"/django-migrate.sh
 
 exit 0
 

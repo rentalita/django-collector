@@ -5,7 +5,10 @@ export COLLECTOR_HOME
 
 . "${COLLECTOR_HOME}"/etc/common
 
-"${COLLECTOR_BIN}"/python.sh "${COLLECTOR_BIN}"/django-manage.py "$@" --settings="${DJANGO_SETTINGS_MODULE}" -v 0
+TARGET="$@"
+TARGET="${TARGET:-help}"
+
+"${COLLECTOR_BIN}"/python.sh "${COLLECTOR_BIN}"/django-manage.py ${TARGET} --settings="${DJANGO_SETTINGS_MODULE}" -v 0
 
 # Local Variables:
 # indent-tabs-mode: nil
