@@ -1,0 +1,2 @@
+include MANIFEST.in
+recursive-include src/python/collector *.po *.mo *.html *.txt
