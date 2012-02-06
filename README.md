@@ -69,8 +69,8 @@ https://github.com/rentalita/django-collector
 
 ## LICENSE
 
-Django Collector is brought to you by [Software
-6](http://rentalita.net/) under the MIT License.
+Django Collector is brought to you by [Rentalita]
+(http://rentalita.net/) under the MIT License.
 
 ## CREATED BY
 
