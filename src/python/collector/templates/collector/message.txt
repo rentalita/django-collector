@@ -1,0 +1,6 @@
+{% load i18n %}
+{% trans "Hello" %}
+
+{{ COLLECTOR_URL }}
+
+{% trans "Thanks" %}

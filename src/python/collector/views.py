@@ -44,21 +44,21 @@ def delete(request, uid):
 @require_http_methods(['GET'])
 def blob404(request):
     try:
-        blob404_tmpl = settings.COLLECTOR_BLOB404_TEMPLATE
+        template_name = settings.COLLECTOR_BLOB404_TEMPLATE
     except:
-        blob404_tmpl = 'collector-blob404.tmpl.%s'
+        template_name = 'collector/blob404.html'
 
-    return render_to_response(blob404_tmpl % (request.LANGUAGE_CODE))
+    return render_to_response(template_name)
 
 
 @require_http_methods(['GET'])
 def deleted(request):
     try:
-        deleted_tmpl = settings.COLLECTOR_DELETED_TEMPLATE
+        template_name = settings.COLLECTOR_DELETED_TEMPLATE
     except:
-        deleted_tmpl = 'collector-deleted.tmpl.%s'
+        template_name = 'collector/deleted.html'
 
-    return render_to_response(deleted_tmpl % (request.LANGUAGE_CODE))
+    return render_to_response(template_name)
 
 # Local Variables:
 # indent-tabs-mode: nil

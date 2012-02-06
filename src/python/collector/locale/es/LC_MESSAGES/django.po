@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-06 12:30-0600\n"
+"POT-Creation-Date: 2012-02-06 12:46-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,3 +25,23 @@ msgstr ""
 #: settings.py:32
 msgid "Espanol"
 msgstr ""
+
+#: templates/collector/blob404.html:2
+msgid "Already deleted?"
+msgstr "Ya ha sido eliminado?"
+
+#: templates/collector/deleted.html:2
+msgid "Deleted"
+msgstr "Eliminado"
+
+#: templates/collector/message.txt:2
+msgid "Hello"
+msgstr "Hola"
+
+#: templates/collector/message.txt:6
+msgid "Thanks"
+msgstr "Gracias"
+
+#: templates/collector/subject.txt:2
+msgid "An important email"
+msgstr "Un correo electrónico importante"
