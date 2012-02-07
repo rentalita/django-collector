@@ -13,6 +13,7 @@ setup(name=PACKAGE, version=VERSION,
       author_email='hello@rentalita.net',
       description='Collect email addresses to tell people when a start-up has launched.',
       url='https://github.com/rentalita/django-collector',
+      include_package_data=True,
 )
 
 # Local Variables:
