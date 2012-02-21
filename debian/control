@@ -1,7 +1,7 @@
 Source: python-django-collector
 Section: python
 Priority: optional
-Maintainer: Rentalita <hello@rentalita.net>
+Maintainer: Rentalita <hello@rentalita.com>
 Build-Depends: debhelper (>= 8.0), python-setuptools
 Standards-Version: 3.9.2
 

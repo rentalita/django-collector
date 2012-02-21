@@ -2,4 +2,4 @@ python-django-collector (3.0.2) unstable; urgency=low
 
   * Initial release. (Closes: #XXXXXX)
 
- -- Tom Vaughan <tom@rentalita.net>  Thu, 22 Sep 2011 08:00:00 -0300
+ -- Tom Vaughan <tom@rentalita.com>  Thu, 22 Sep 2011 08:00:00 -0300

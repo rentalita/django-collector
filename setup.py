@@ -10,7 +10,7 @@ VERSION = os.environ['VERSION']
 setup(name=PACKAGE, version=VERSION,
       packages=find_packages('src/python'), package_dir={'': 'src/python'},
       author='Rentalita',
-      author_email='hello@rentalita.net',
+      author_email='hello@rentalita.com',
       description='Collect email addresses to tell people when a start-up has launched.',
       url='https://github.com/rentalita/django-collector',
       include_package_data=True,

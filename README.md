@@ -70,7 +70,7 @@ https://github.com/rentalita/django-collector
 ## LICENSE
 
 Django Collector is brought to you by [Rentalita]
-(http://rentalita.net/) under the MIT License.
+(http://rentalita.com/) under the MIT License.
 
 ## CREATED BY
 
