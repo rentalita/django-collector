@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Django-collector by rentalita</title>
+    
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Django-collector</h1>
+        <p>Django Collector is a Django app that collects email addresses.</p>
+        <p class="view"><a href="https://github.com/rentalita/django-collector">View the Project on GitHub <small>rentalita/django-collector</small></a></p>
+        <ul>
+          <li><a href="https://github.com/rentalita/django-collector/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/rentalita/django-collector/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/rentalita/django-collector">Fork On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Django Collector -- Collects email addresses.</h1>
+
+<h2>QUICK START</h2>
+
+<p>Please consult <a href="http://django-collector.rtfd.org">The Django Collector
+Documentation</a> to install and use
+Django Collector. H@x0rs read on...</p>
+
+<h2>BUILD</h2>
+
+<p>This runs <code>python setup.py develop</code> (more or less).</p>
+
+<pre><code>./build.sh
+</code></pre>
+
+<h2>TEST</h2>
+
+<p>This uses <code>nosetests</code> to run the unit tests, and enables the built-in
+coverage report.</p>
+
+<pre><code>./tests.sh
+sensible-browser ./coverage/index.html
+</code></pre>
+
+<h2>INSTALL</h2>
+
+<ul>
+<li>
+<p>Create a Debian/Ubuntu package:</p>
+
+<pre><code>debuild -uc -us -i -I
+sudo dpkg -i ../python-django-collector*.deb
+</code></pre>
+</li>
+<li>
+<p>Link the source code under <code>${HOME}/.local</code>:</p>
+
+<pre><code>PYTHONPATH=${HOME}/.local/lib/python27:${PYTHONPATH}
+export PYTHONPATH
+
+pip install --user -e .
+</code></pre>
+</li>
+</ul><h2>DEBUG</h2>
+
+<p>The layout used by Django Collector depends on that a particular
+environment has been setup (see <code>etc/common</code>). For this reason several
+wrapper scripts have been provided to help when working on the
+command-line. For example:</p>
+
+<pre><code>$ ./bin/python.sh
+&gt;&gt;&gt; from collector.models import Blob
+&gt;&gt;&gt; Blob.objects.all()
+</code></pre>
+
+<h2>REQUIREMENTS</h2>
+
+<p>As tested on <a href="http://ubuntu.com/">Ubuntu 11.04</a>. See also <a href="https://github.com/rentalita/ubuntu-setup">Ubuntu
+Setup</a>.</p>
+
+<ul>
+<li><a href="http://www.python.org/">python 2.7</a></li>
+<li><a href="http://packages.python.org/distribute/">python-setuptools 0.6</a></li>
+<li><a href="http://code.google.com/p/python-nose/">python-nose 1.0</a></li>
+<li><a href="http://nedbatchelder.com/code/coverage/">python-coverage 3.4</a></li>
+<li><a href="http://www.djangoproject.com/">python-django 1.3</a></li>
+</ul><h2>OPTIONAL</h2>
+
+<ul>
+<li><a href="http://www.logilab.org/project/pylint">pylint 0.23</a></li>
+<li><a href="http://sphinx.pocoo.org/">python-sphinx 1.0</a></li>
+<li><a href="http://www.pip-installer.org/">python-pip 0.8</a></li>
+</ul><h2>CONTRIBUTE</h2>
+
+<p><a href="https://github.com/rentalita/django-collector">https://github.com/rentalita/django-collector</a></p>
+
+<h2>LICENSE</h2>
+
+<p>Django Collector is brought to you by <a href="http://rentalita.com/">Rentalita</a> under the MIT License.</p>
+
+<h2>CREATED BY</h2>
+
+<p><a href="https://github.com/rentalita/django-layout">https://github.com/rentalita/django-layout</a></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/rentalita">rentalita</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
