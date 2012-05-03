@@ -9,7 +9,6 @@ env:
 
 before_install:
   - pip install coverage Django==$DJANGO_VERSION
-  - pip install --upgrade nose
 
 install: ./build.sh
 script: ./test.sh
