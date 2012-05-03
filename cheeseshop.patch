@@ -10,13 +10,13 @@ index 27b6886..4f4014a 100644
 --- a/setup.py
 +++ b/setup.py
 @@ -4,8 +4,8 @@ import os
- 
+
  from setuptools import setup, find_packages
- 
+
 -PACKAGE = os.environ['PACKAGE']
 -VERSION = os.environ['VERSION']
 +PACKAGE = 'django-collector'
 +VERSION = '3.0.2'
- 
+
  setup(name=PACKAGE, version=VERSION,
        packages=find_packages('src/python'), package_dir={'': 'src/python'},
