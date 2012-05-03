@@ -8,7 +8,7 @@ env:
   - DJANGO_VERSION=1.3.1
 
 before_install:
-  - pip install nose coverage Django==$DJANGO_VERSION
+  - pip install coverage Django==$DJANGO_VERSION
 
 install: ./build.sh
 script: ./test.sh
