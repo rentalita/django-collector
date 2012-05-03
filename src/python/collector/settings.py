@@ -6,22 +6,18 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.environ['COLLECTOR_DB'] + os.sep + 'collector.db',
+        }
     }
-}
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
-)
+    )
 
 TEMPLATE_LOADERS = (
     'django.template.loaders.app_directories.Loader',
-)
-
-TEMPLATE_DIRS = (
-    os.environ['COLLECTOR_WWW'] + '/templates/',
-)
+    )
 
 LANGUAGE_CODE = 'en'
 
@@ -30,7 +26,7 @@ _ = lambda x: x
 LANGUAGES = (
     ('en', _(u'English')),
     ('es', _(u'Espanol')),
-)
+    )
 
 APPEND_SLASH = False
 
