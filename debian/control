@@ -6,9 +6,9 @@ Build-Depends: debhelper (>= 8.0), python-setuptools
 Standards-Version: 3.9.2
 
 Package: python-django-collector
-Homepage: https://github.com/rentalita/django-collector
+Homepage: http://rentalita.github.com/django-collector
 Architecture: all
 Depends: python-django
 Description: Collect email addresses to tell people when a start-up has launched.
  Please see a much more detailed description at:
- https://github.com/rentalita/django-collector/blob/master/README.md
+ http://rentalita.github.com/django-collector

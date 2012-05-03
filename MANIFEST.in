@@ -1,2 +1,4 @@
+include README.md
 include MANIFEST.in
+include requirements.txt
 recursive-include src/python/collector *.po *.mo *.html *.txt
