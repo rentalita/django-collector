@@ -3,6 +3,7 @@
 from collector.settings import *
 
 import os
+import random
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -19,7 +20,7 @@ ROOT_URLCONF = 'collector.tests.urls'
 COLLECTOR_SEND_EMAIL = True
 
 EMAIL_HOST = 'localhost'
-EMAIL_PORT = 8025
+EMAIL_PORT = random.randint(1025, 9999)
 
 # Local Variables:
 # indent-tabs-mode: nil
