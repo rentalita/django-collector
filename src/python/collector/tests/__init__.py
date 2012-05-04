@@ -3,7 +3,7 @@
 import subprocess
 import threading
 
-from collector.tests import settings
+from django.conf import settings
 
 smtpd = None
 
