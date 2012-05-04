@@ -17,10 +17,10 @@ DATABASES = {
 
 ROOT_URLCONF = 'collector.tests.urls'
 
-COLLECTOR_SEND_EMAIL = True
-
 EMAIL_HOST = 'localhost'
 EMAIL_PORT = random.randint(1025, 9999)
+
+COLLECTOR_SEND_EMAIL = True
 
 # Local Variables:
 # indent-tabs-mode: nil
