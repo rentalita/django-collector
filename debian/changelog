@@ -1,4 +1,4 @@
-python-django-collector (3.0.3) unstable; urgency=low
+python-django-collector (3.0.3) precise; urgency=low
 
   * Initial release. (Closes: #XXXXXX)
 
