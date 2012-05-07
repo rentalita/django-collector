@@ -1,7 +1,7 @@
 PACKAGE="python-django-collector"
 export PACKAGE
 
-VERSION="3.0.2"
+VERSION="3.0.3"
 export VERSION
 
 SQLITE3=$(which sqlite3)

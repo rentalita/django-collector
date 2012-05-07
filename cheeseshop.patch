@@ -16,7 +16,7 @@ index 27b6886..4f4014a 100644
 -PACKAGE = os.environ['PACKAGE']
 -VERSION = os.environ['VERSION']
 +PACKAGE = 'django-collector'
-+VERSION = '3.0.2'
++VERSION = '3.0.3'
 
  setup(name=PACKAGE, version=VERSION,
        packages=find_packages('src/python'), package_dir={'': 'src/python'},
